@@ -69,6 +69,7 @@
         <input type="number" step="any" name="num2" id="num2" placeholder="Num2" required>
     </div><br>
     <div class="buttons">
+
     <input type="submit" value="Calcular">
     <button type="reset" onclick="window.location.href=window.location.pathname">Limpar</button>
     </div>
