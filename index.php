@@ -21,34 +21,43 @@
             $erro = 'Insira números válidos.';
         } else {
             switch ($op) {
-                case '1': $resultado = $num1 + $num2; 
-                echo "<p>Resultado: <strong>".$resultado."<strong>.</p>";
-                break;
-                case '2': $resultado = $num1 - $num2; 
-                echo "<p>Resultado: <strong>".$resultado."<strong>.</p>";
-                break;
-                case '3': $resultado = $num1 * $num2; 
-                echo "<p>Resultado: <strong>".$resultado."<strong>.</p>";
-                break;
+                case '1': 
+                    $resultado = $num1 + $num2; 
+                    break;
+                case '2': 
+                    $resultado = $num1 - $num2; 
+                    break;
+                case '3': 
+                    $resultado = $num1 * $num2; 
+                    break;
                 case '4':
                     if ((float)$num2 == 0.0) {
                         $erro = 'Divisão por zero não é permitida.';
                     } else {
                         $resultado = $num1 / $num2;
                     }
-                    echo "<p>Resultado: <strong>".$resultado."<strong>.</p>";
                     break;
-                case '5': $resultado = $num1 ** $num2; break;
+                case '5': 
+                    $resultado = $num1 ** $num2; 
+                    break;
                 case '6':
                     if ((float)$num2 == 0.0) {
                         $erro = 'Módulo por zero não é permitido.';
                     } else {
                         $resultado = fmod($num1, $num2);
                     }
-                    echo "<p>Resultado: <strong>".$resultado."<strong>.</p>";
                     break;
-                default: $erro = 'Operação inválida.'; break;
+                default: 
+                    $erro = 'Operação inválida.'; 
+                    break;
             }
+        }
+
+        // Saída final
+        if ($erro !== null) {
+            echo "<p style='color:red;'><strong>$erro</strong></p>";
+        } elseif ($resultado !== null) {
+            echo "<p>Resultado: <strong>".$resultado."</strong></p>";
         }
     }
 ?>
