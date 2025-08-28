@@ -7,14 +7,53 @@
 body{
     height: 100dvh;
     width: 100dvw;
+    background: radial-gradient(black, #0c0e35);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+
+form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
 select{
-    direction: inherit;
+    
+}
+
+label{
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.buttons input, button{
+    width: 100px;
+    height: 50px;
+    border: 2px solid #2a5ce6;
+    box-shadow: 0 0 10px 5px#2a5ce6;
+    background-color: transparent;
+    border-radius: 20px;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.buttons input:hover, button:hover{
+    border: 2px solid #2a5ce6;
+    box-shadow: none;
+    background-color: #2a5ce6;
+    
 }
 
 .number-box{

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Calculadora</title>
 </head>
 <body>
@@ -22,13 +23,13 @@
         } else {
             switch ($op) {
                 case '1': $resultado = $num1 + $num2; 
-                echo "<p>Resultado: <strong>".$resultado."<strong>.</p>";
+                echo "<p>Resultado: <strong>".$resultado."<strong></p>";
                 break;
                 case '2': $resultado = $num1 - $num2; 
-                echo "<p>Resultado: <strong>".$resultado."<strong>.</p>";
+                echo "<p>Resultado: <strong>".$resultado."<strong></p>";
                 break;
                 case '3': $resultado = $num1 * $num2; 
-                echo "<p>Resultado: <strong>".$resultado."<strong>.</p>";
+                echo "<p>Resultado: <strong>".$resultado."<strong></p>";
                 break;
                 case '4':
                     if ((float)$num2 == 0.0) {
@@ -36,7 +37,7 @@
                     } else {
                         $resultado = $num1 / $num2;
                     }
-                    echo "<p>Resultado: <strong>".$resultado."<strong>.</p>";
+                    echo "<p>Resultado: <strong>".$resultado."<strong></p>";
                     break;
                 case '5': $resultado = $num1 ** $num2; break;
                 case '6':
@@ -45,7 +46,7 @@
                     } else {
                         $resultado = fmod($num1, $num2);
                     }
-                    echo "<p>Resultado: <strong>".$resultado."<strong>.</p>";
+                    echo "<p>Resultado: <strong>".$resultado."<strong></p>";
                     break;
                 default: $erro = 'Operação inválida.'; break;
             }
@@ -67,8 +68,11 @@
         <input type="number" step="any" name="num1" id="num1" placeholder="Num1" required>
         <input type="number" step="any" name="num2" id="num2" placeholder="Num2" required>
     </div><br>
+    <div class="buttons">
     <input type="submit" value="Calcular">
     <button type="reset" onclick="window.location.href=window.location.pathname">Limpar</button>
+    </div>
+    
 </form>
 
 </body>
