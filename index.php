@@ -50,6 +50,11 @@
                     break;
                 default: $erro = 'Operação inválida.'; break;
             }
+            if ($erro !== null) {
+            echo "<p style='color:red;'><strong>$erro</strong></p>";
+        } elseif ($resultado !== null) {
+            echo "<p>Resultado: <strong>".$resultado."</strong></p>";
+        }
         }
     }
 ?>
